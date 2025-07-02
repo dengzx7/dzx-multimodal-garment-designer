@@ -15,7 +15,7 @@ def mgd(dataset: str, pretrained: bool = True, **kwargs) -> UNet2DConditionModel
     unet = UNet2DConditionModel.from_config(config)
 
     if pretrained:
-        checkpoint = f"https://github.com/aimagelab/multimodal-garment-designer/releases/download/weights/{dataset}.pth"
-        unet.load_state_dict(torch.hub.load_state_dict_from_url(checkpoint, progress=True))
+        checkpoint = f"https://github.com/dengzx7/dzx-multimodal-garment-designer/releases/download/weights/{dataset}.pth"
+        unet.load_state_dict(torch.hub.load_state_dict_from_url(checkpoint, progress=True, map_location=torch.device('cpu')))
 
     return unet
