@@ -52,7 +52,7 @@ def main() -> None:
     vae = AutoencoderKL.from_pretrained(args.pretrained_model_name_or_path, subfolder="vae", revision=args.revision)
 
     unet = torch.hub.load(dataset=args.dataset, repo_or_dir='dengzx7/dzx-multimodal-garment-designer', source='github',
-                          model='mgd', pretrained=False, map_location=torch.device('cpu'))
+                          model='mgd', pretrained=True, map_location=torch.device('cpu'))
 
     # Freeze vae and text_encoder
     vae.requires_grad_(False)
