@@ -74,7 +74,7 @@ To run the inference please use the following:
 ```
 python src/eval.py --dataset_path <path> --batch_size <int> --mixed_precision fp16 --output_dir <path> --save_name <string> --num_workers_test <int> --sketch_cond_rate 0.2 --dataset <dresscode|vitonhd> --start_cond_rate 0.0 --test_order <paired|unpaired>
 
-[zongxiang] python src/eval.py --dataset_path ../assets/data/dresscode --batch_size 10 --mixed_precision no --output_dir ../zx_output --save_name zx_name --num_workers_test 5 --sketch_cond_rate 0.2 --dataset dresscode --start_cond_rate 0.0 --test_order paired
+[zongxiang] python src/eval.py --dataset_path ~/Desktop/paper/dzx-multimodal-garment-designer/assets/data/dresscode --batch_size 10 --mixed_precision no --output_dir ~/Desktop/paper/dzx-multimodal-garment-designer/zx_output --save_name zx_name --num_workers_test 5 --sketch_cond_rate 0.2 --dataset dresscode --start_cond_rate 0.0 --test_order paired
 ```
 
 - ```dataset_path``` is the path to the dataset (change accordingly to the dataset parameter)

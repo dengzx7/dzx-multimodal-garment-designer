@@ -52,7 +52,7 @@ def generate_images_from_mgd_pipe(
     path = os.path.join(output_dir, f"{save_name}_{test_order}", "images")
 
     os.makedirs(path, exist_ok=True)
-    generator = torch.Generator("cuda").manual_seed(seed)
+    generator = torch.Generator("cpu").manual_seed(seed)
 
     for batch in tqdm(test_dataloader):
         model_img = batch["image"]
